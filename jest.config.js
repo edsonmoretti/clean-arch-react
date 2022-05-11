@@ -1,7 +1,7 @@
 module.exports = {
   roots: ["<rootDir>/src"],
-  collectCoverage: ["<rootDir>/src/**/*.{ts,jsx}"],
-  converageDirectory: "coverage",
+  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,jsx}"],
+  coverageDirectory: "<rootDir>/coverage",
   testEnvironment: "node",
   transform: {
     ".+\\.ts$": "ts-jest",
