@@ -1,7 +1,7 @@
 import { HttpPostClientSpy } from "../../test/mock-http-client";
 import { RemoteAuthentication } from "./remote-authentication";
 const faker = require("faker");
-console.log(faker.internet.url());
+
 type SutTypes = {
   sut: RemoteAuthentication;
   httpPostClientSpy: HttpPostClientSpy;
