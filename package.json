@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "teste:watch": "npm test -- --watch",
-    "teste:coverage": "npm test -- --coverage",
-    "teste:staged": "npm test -- --findRelatedTests"
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
+    "test:staged": "npm test -- --findRelatedTests"
   },
   "author": "",
   "license": "ISC",
