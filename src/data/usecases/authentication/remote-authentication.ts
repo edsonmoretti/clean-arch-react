@@ -1,11 +1,12 @@
-import {HttpPostClient} from "@/data/protocols/http/http-post-client";
-import {AuthenticationParams} from "@/domain/usecases/authentication";
-import {HttpStatusCode} from "@/data/protocols/http/http-response";
-import {InvalidCredentialsError} from "@/domain/errors/invalid-credentials-error";
-import {UnexpectedError} from "@/domain/errors/unexpected-error";
-import {NotfoundError} from "@/domain/errors/notfound-error";
-import {InternalServerError} from "@/domain/errors/internal-server-error";
-import {AccountModel} from "@/domain/models/account-model";
+import {HttpPostClient, HttpStatusCode} from "@/data/protocols/http";
+import {AuthenticationParams} from "@/domain/usecases";
+import {
+    InvalidCredentialsError,
+    InternalServerError,
+    NotFoundError,
+    UnexpectedError
+} from "@/domain/errors";
+import {AccountModel} from "@/domain/models";
 
 export class RemoteAuthentication {
     constructor(
@@ -29,7 +30,7 @@ export class RemoteAuthentication {
             case HttpStatusCode.internalServerError:
                 throw new InternalServerError();
             case HttpStatusCode.notFound:
-                throw new NotfoundError();
+                throw new NotFoundError();
             default:
                 throw new UnexpectedError();
         }
