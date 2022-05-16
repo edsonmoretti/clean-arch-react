@@ -7,7 +7,8 @@
     "test": "jest --passWithNoTests",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
-    "test:staged": "npm test -- --findRelatedTests"
+    "test:staged": "npm test -- --findRelatedTests",
+    "precode": "rokio.cmd"
   },
   "author": "",
   "license": "ISC",
