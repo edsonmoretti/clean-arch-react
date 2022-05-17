@@ -81,6 +81,7 @@ goto end
 IF [%3] == [] (goto nenhum-comando-make-model)
 IF ["%3"] == [""] (goto nenhum-comando-make-model)
 setlocal EnableDelayedExpansion
+
 set "string=%3"
 rem Do the split:
 set i=1
@@ -143,7 +144,7 @@ exit /b
 echo **********************************************************
 echo *                       MAKE                             *
 echo * rokio make fileType file-name                          *
-echo * Cria arquivos dentro dos dirtorios correspondentes     *
+echo * Cria arquivos dentro dos diretorios correspondentes     *
 echo *                                                        *
 echo * rokio make model file-name                             *
 echo * Cria arquivo de model em src/domains/models            *
